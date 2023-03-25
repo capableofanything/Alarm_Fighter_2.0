@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1184195479
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -157,8 +157,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1184195479
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -1041591026, guid: fcad3cb1551537e429b2fbed307a3867, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -241,8 +241,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1184195479
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 1615411940, guid: fcad3cb1551537e429b2fbed307a3867, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -325,8 +325,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1184195479
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -2115179507, guid: fcad3cb1551537e429b2fbed307a3867, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -350,6 +350,9 @@ GameObject:
   - component: {fileID: 7056932923941211106}
   - component: {fileID: 7056932923941211109}
   - component: {fileID: 7056932923941211107}
+  - component: {fileID: 3136163412603613588}
+  - component: {fileID: 3881692180017075569}
+  - component: {fileID: 3005636309151438628}
   m_Layer: 0
   m_Name: NavigationMonster
   m_TagString: Untagged
@@ -411,8 +414,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1184195479
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -569797753, guid: 2af3811e25bcc5146a7dcb84670dc41e, type: 3}
   m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
@@ -445,3 +448,41 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &3136163412603613588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056932923941211108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b64fef730b788634badda68f3888c6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterHPbar: {fileID: 5563703962830164702, guid: 92e7235221dec1640a9b71855199df9b, type: 3}
+  playTime: 100
+--- !u!114 &3881692180017075569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056932923941211108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac2fec88d9409c648a277d01865d3a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3005636309151438628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056932923941211108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbfaf445a7bd304cb4fd5db68c0b338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
