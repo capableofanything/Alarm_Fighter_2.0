@@ -12,7 +12,7 @@ public class DoorOpen : MonoBehaviour
 
     void Update()
     {
-        Managers.Sound.Play("Effects/Door",Define.Sound.Effect,1.0f,0.1f);
+        Managers.Sound.Play("Effects/Door",Define.Sound.Effect,1.0f,0.05f);
         GameObject go = Managers.Sound.GetCurrentBGM();
         go.GetComponent<AudioSource>().Pause();
         Time.timeScale = 0.01f;
