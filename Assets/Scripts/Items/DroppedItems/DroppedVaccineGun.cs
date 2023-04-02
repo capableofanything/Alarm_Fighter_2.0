@@ -18,6 +18,8 @@ public class DroppedVaccineGun : DroppedItem
         if (go.CompareTag("Player"))
         {
             PlayerStat stat = go.GetComponent<PlayerStat>();
+            Managers.Monster.BossMonster.GetComponent<Animator>().SetTrigger("Sad");
+            
             if (stat != null)
             {
 

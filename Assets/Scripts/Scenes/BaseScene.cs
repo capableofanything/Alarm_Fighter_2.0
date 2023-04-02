@@ -21,7 +21,12 @@ public abstract class BaseScene : MonoBehaviour     //모든 씬 script가 상속받는 
         }
     }
     public abstract void Clear();
-    
+
+    protected void SetBpm(int bpm)
+    {
+        Managers.Bpm.BPM = bpm;
+    }
+
     protected void SoundBgmPlay()
     {
         Managers.Sound.Play(soundBgmName, Define.Sound.Bgm,1.0f,0.2f);

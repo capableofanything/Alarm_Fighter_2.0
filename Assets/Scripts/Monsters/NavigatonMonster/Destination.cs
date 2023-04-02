@@ -8,7 +8,7 @@ public class Destination : MonoBehaviour
 
     void Start()
     {
-        Invoke("Destroy", 0.3f);
+        Invoke("Destroy", 0.8f);
     }
     void Destroy()
     {

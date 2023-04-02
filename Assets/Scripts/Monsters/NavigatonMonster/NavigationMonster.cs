@@ -31,13 +31,23 @@ public class NavigationMonster : MonoBehaviour
         callOrderList[index][note]();
 
         note++;
-        if (note >= 4)
+        if (note >= 8)
         {
             note = 0;
             index++;
+            
+            if(index == 1 || index == 3)
+            {
+                GetComponent<Animator>().SetTrigger("Angry_Idle");
+            }
+            else
+            {
+                GetComponent<Animator>().SetTrigger("Caution");
+            }
         }
+     }
 
         //index++;
-    }
-
 }
+
+

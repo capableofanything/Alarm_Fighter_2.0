@@ -12,6 +12,7 @@ public class NavigationGameScene : BaseScene//At the beginning of the this scene
     protected override void Init()
     {
         base.Init();
+        SetBpm(177);
         SoundBgmPlay();
         SpawnBackGround();
         SpawnField();
