@@ -12,7 +12,7 @@ public class Shield : MonoBehaviour
         durability -= 1;
         if (durability <= 0)
         {
-            Destroy();
+            GetComponent<Animator>().Play("Hit");
         }
         return false;
 
@@ -22,7 +22,7 @@ public class Shield : MonoBehaviour
         StartCoroutine("ActiveBuff");
     }
 
-    private void Destroy()
+    public void Destroy()
     {
         //Managers.Resource.Destroy(gameObject);
         Object.Destroy(gameObject);

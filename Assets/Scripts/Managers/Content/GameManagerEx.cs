@@ -9,18 +9,23 @@ public class GameManagerEx
     {
         Managers.Clear();
         Managers.Sound.Clear();     
-        Managers.Scene.LoadScene("GameOver");
+        Managers.Scene.LoadScene("GameOverScene");
         //Managers.Sound.Play("GameClear", Define.Sound.Bgm);   
 
     }
     public void StageClear()       
     {
         Managers.Clear();
-        Managers.Scene.LoadScene("StageClear");
+        Managers.Scene.LoadScene("StageClearScene");
         Managers.Sound.Clear();     
         //Managers.Sound.Play("GameClear", Define.Sound.Bgm);
 
     }
-
+    public void GameClear()
+    {
+        Managers.Clear();
+        Managers.Scene.LoadScene("GameClearScene");
+        Managers.Sound.Clear();
+    }
 }
 

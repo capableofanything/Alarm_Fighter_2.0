@@ -18,54 +18,61 @@ public class SettingGameScene : BaseScene//At the beginning of the this scene, r
         SpawnMonster();       
         SpawnPlayer();
         SpawnItemSpawner();
+        CheckingGame();
     }
     public void Update()
     {
         Managers.Bpm.UpdatePerBit();
     }
-
+  
     private void SpawnBackGround()
     {
-
+        Managers.Resource.Instantiate("BackGrounds/SettingBackground");
     }
     private void SpawnField()
     {
-        GameObject go = Managers.Resource.Instantiate("Fields/Fields");
+        Managers.Resource.Instantiate("Fields/Fields_SettingDemo");
+        GameObject go = Managers.Resource.Instantiate("Fields/Fields_Setting");
         if(go != null) 
         {
             Managers.Field.SetField(go.GetComponent<Field>());
             Managers.Field.Init();
         }
+        Animator[] ani = go.GetComponentsInChildren<Animator>();
+        foreach(Animator a in ani)
+        {
+            a.runtimeAnimatorController = Managers.Resource.Load<RuntimeAnimatorController>("Art/Animations/fields/SettingFieldAnimation/SettingGridAnimator");
+        }
     }
     private void SpawnPlayer()
     {
-        GameObject go = Managers.Resource.Load<GameObject>("Prefabs/Players/Player");
+        GameObject go = Managers.Resource.Load<GameObject>("Prefabs/Players/PlayerRig");
         if(go != null) 
         {
-            go = Managers.Resource.Instantiate("Players/Player");
+            go = Managers.Resource.Instantiate("Players/PlayerRig");
             Managers.Player.SetPlayer(go.GetComponent<Player>());
             SpawnPlayerHpBar(go);
         }
     }
     private void SpawnMonster()                
     {
-        // 경로 설정 필요
-        GameObject go = Managers.Resource.Instantiate("Monsters/SettingMonster/SettingMonster_empty");
+        GameObject go = Managers.Resource.Instantiate("Monsters/SettingMonster/SettingMonster");
         if( go != null)
         {
             SpawnMonsterHpBar(go);  
             Managers.Monster.BossMonster = go;
+            Managers.Monster.Init(Define.GameSceneOrder.SettingScene_main);
         }
     }   
     private void SpawnPlayerHpBar(GameObject parent)
     {
-        GameObject go = Managers.Resource.Instantiate("Players/PlayerHP");
+        GameObject go = Managers.Resource.Instantiate("Players/PlayerHP_Setting");
         parent.GetComponent<PlayerHpBarUpdater>().SetPlayerHpBar(go);
     }
 
     private void SpawnMonsterHpBar(GameObject parent)
     {
-        GameObject go = Managers.Resource.Instantiate("Monsters/CameraMonster/MonsterHP");
+        GameObject go = Managers.Resource.Instantiate("Monsters/SettingMonster/MonsterHP");
         if(go != null) 
         {
             parent.GetComponent<MonsterHpBarUpdater>().monsterHPbar = go;

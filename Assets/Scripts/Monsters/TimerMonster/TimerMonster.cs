@@ -21,23 +21,30 @@ public class TimerMonster : MonoBehaviour
 
         index = 0;
         note = 0;
+
     }
 
     void BitBehave()
     {
+        if (!this.transform.GetComponent<Animator>().GetBool("startEnd"))
+            return;
+
         if (index > callOrderList.Count - 1)
-            index = 0;
+            index = 2;
 
         callOrderList[index][note]();
 
         note++;
-        if (note >= 4)
+        if (note >= callOrderList[index].Count)
         {
             note = 0;
-            //index++; // notebarlist를 추가하면 다시 주석 풀어줘야 됨.
+            index++;
         }
 
-        //index++;
     }
 
+    public void SetStartEnd()
+    {
+        this.transform.GetComponent<Animator>().SetBool("startEnd", true);
+    }
 }

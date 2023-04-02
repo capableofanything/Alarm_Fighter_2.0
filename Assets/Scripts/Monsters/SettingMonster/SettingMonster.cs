@@ -13,7 +13,10 @@ public class SettingMonster : MonoBehaviour
     void Start()
     {
         settingAttackPattern = GetComponent<SettingAttackPattern>();
-
+        Invoke("BitChecking", 4.3f);
+    }
+    void BitChecking()
+    {
         Managers.Bpm.BehaveAction -= BitBehave;      //몬스터의 비트 마다 실행할 BitBehave 구독
         Managers.Bpm.BehaveAction += BitBehave;
 
@@ -22,7 +25,6 @@ public class SettingMonster : MonoBehaviour
         index = 0;
         note = 0;
     }
-
     void BitBehave()
     {
         if (index > callOrderList.Count - 1)

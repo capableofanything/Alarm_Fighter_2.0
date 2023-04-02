@@ -18,6 +18,8 @@ public class TimerGameScene : BaseScene//At the beginning of the this scene, res
         SpawnMonster();
         SpawnPlayer();
         SpawnItemSpawner();
+        CheckingGame();
+
     }
     public void Update()
     {
@@ -26,7 +28,11 @@ public class TimerGameScene : BaseScene//At the beginning of the this scene, res
 
     private void SpawnBackGround()
     {
-
+        GameObject go = Managers.Resource.Load<GameObject>("Prefabs/BackGrounds/TimerBackground");
+        if (go != null)
+        {
+            go = Managers.Resource.Instantiate("BackGrounds/TimerBackground");
+        }
     }
     private void SpawnField()
     {
@@ -35,6 +41,11 @@ public class TimerGameScene : BaseScene//At the beginning of the this scene, res
         {
             Managers.Field.SetField(go.GetComponent<Field>());
             Managers.Field.Init();
+            Animator[] ani = go.GetComponentsInChildren<Animator>();
+            foreach(Animator a in ani)
+            {
+                a.runtimeAnimatorController = Managers.Resource.Load<RuntimeAnimatorController>("Art/Animations/Fields/TimerFieldAnimation/TimerGridAnimator");
+            }
         }
     }
     private void SpawnPlayer()
@@ -49,11 +60,12 @@ public class TimerGameScene : BaseScene//At the beginning of the this scene, res
     }
     private void SpawnMonster()
     {
-        GameObject go = Managers.Resource.Instantiate("Monsters/TimerMonster/TimerMonster_Test");
+        GameObject go = Managers.Resource.Instantiate("Monsters/TimerMonster/TimerMonster");
         if (go != null)
         {
             SpawnMonsterHpBar(go);
             Managers.Monster.BossMonster = go;
+            Managers.Monster.Init(Define.GameSceneOrder.TimeScene_main);//sunho 0402 add
         }
     }
     private void SpawnPlayerHpBar(GameObject parent)

@@ -58,6 +58,7 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-#usersetting crash
-UserSettings/Layouts/default-2021.dwlt
+#default crash ignore
+*.dwlt
+
 

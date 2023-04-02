@@ -9,7 +9,19 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/JaeYun.unity
-    guid: 5b53b12416eab3d4cb083ce1f227d4ad
+    path: Assets/Scenes/Map.unity
+    guid: dd422f92cc4b92f4fadec7b93392e5b0
+  - enabled: 1
+    path: Assets/Scenes/TimeScene_main.unity
+    guid: 2cf4acec082d5764eb8ea6c3c31ed414
+  - enabled: 1
+    path: Assets/Scenes/CameraScene_main.unity
+    guid: e55f2f13da5834a4bbe769a47c25f312
+  - enabled: 1
+    path: Assets/Scenes/SettingScene_main.unity
+    guid: a3fee0e9c5a258240a5ac2a82af086ac
+  - enabled: 1
+    path: Assets/Scenes/FinishedScene.unity
+    guid: 3535ebb8a7837694ba63f3dab98b7455
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 513694f6af2f560418a6b6effa04bdd9, type: 2}

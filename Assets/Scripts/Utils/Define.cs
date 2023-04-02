@@ -10,4 +10,18 @@ public class Define
         Effect,
         MaxCount,
     }
+    public enum GameSceneOrder
+    {
+        TimeScene_main,
+        CameraScene_main,
+        //NavigatorScene_main,
+        //MassageScene_main,
+        SettingScene_main,
+        Finished
+        //FolderScene,
+        //CallScene,
+
+        //WeatherScene,
+        //DiliveryScene,
+    }
 }

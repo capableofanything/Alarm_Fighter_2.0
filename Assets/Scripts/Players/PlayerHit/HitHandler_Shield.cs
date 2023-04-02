@@ -20,8 +20,9 @@ public class HitHandler_Shield : HitHandler
 
         //has the shield so uses the shield an returns false
         //and calls HitHandler_Defalut.Request()
-        if (!shield.GetComponent<Shield>().BlockDamage())
-            successor.Request();
+        //dong ju : fix complete
+        shield.GetComponent<Shield>().BlockDamage();
+
         
     }
 }

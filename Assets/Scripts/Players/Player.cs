@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0)&&Managers.Player.IsAlive())
         {
             Vector3 mousePos = Input.mousePosition;
             Vector2 pos = Camera.main.ScreenToWorldPoint(mousePos);
@@ -41,15 +41,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        Vector3 a = Vector3.forward;
-
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            GetComponent<PlayerStat>().CurrentHP -= 1;
-        }
-        else if(Input.GetKeyDown(KeyCode.N))
-        {
-            GetComponent<PlayerStat>().CurrentHP += 1;
-        }
+        //float HP = GetComponent<PlayerStat>().CurrentHP;
+        //Debug.Log("Current HP" + HP);
     }
 }

@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterHPbar: {fileID: 5563703962830164702, guid: 92e7235221dec1640a9b71855199df9b, type: 3}
-  playTime: 100
+  playTime: 120
 --- !u!210 &-6591887851695333914
 SortingGroup:
   m_ObjectHideFlags: 0

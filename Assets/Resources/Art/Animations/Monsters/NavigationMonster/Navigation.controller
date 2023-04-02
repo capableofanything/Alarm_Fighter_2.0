@@ -142,18 +142,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Angry_Idle
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Caution
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
+<<<<<<< HEAD:Assets/Resources/Art/Animations/Monsters/NavigationMonster/Navigation.controller
     m_Controller: {fileID: 0}
   - m_Name: Time
     m_Type: 1
@@ -161,6 +162,9 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+=======
+    m_Controller: {fileID: 9100000}
+>>>>>>> 2c51ffd90172b193e73bbed6b8bc40c93a206fb8:Assets/Resources/Art/Animations/Monsters/NavigationMonster/SadNavigation.controller
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -317,13 +321,17 @@ AnimatorStateMachine:
     m_Position: {x: 350, y: 210, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6530790822948219081}
-    m_Position: {x: 690, y: 40, z: 0}
+    m_Position: {x: 630, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2313879376764871302}
+<<<<<<< HEAD:Assets/Resources/Art/Animations/Monsters/NavigationMonster/Navigation.controller
     m_Position: {x: 690, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7046477839476665984}
     m_Position: {x: 725, y: 285, z: 0}
+=======
+    m_Position: {x: 710, y: 190, z: 0}
+>>>>>>> 2c51ffd90172b193e73bbed6b8bc40c93a206fb8:Assets/Resources/Art/Animations/Monsters/NavigationMonster/SadNavigation.controller
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

@@ -10,9 +10,9 @@ public class MonsterHpBarUpdater : MonoBehaviour
     //Stat stat;
     [SerializeField]
     public float playTime;
-
     private Image hp;
     private float currentTime;
+
     void Start()
     {
         /*
@@ -33,9 +33,7 @@ public class MonsterHpBarUpdater : MonoBehaviour
         else
         {
             currentTime = 0;
-            Debug.Log("Game Clear");
-            //Managers.Game.StageClear();
-            //Managers.Scene.LoadScene("NextGameScene");
+            Managers.Monster.SetAlive(false);
         }
         hp.fillAmount = currentTime / playTime;
         //dong ju

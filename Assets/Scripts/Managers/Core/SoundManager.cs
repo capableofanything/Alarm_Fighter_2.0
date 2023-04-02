@@ -12,6 +12,9 @@ public class SoundManager
     //MP3 À½¿ø   -> AudioClip
     //°ü°´(±Í)   -> AudioListener
 
+    GameObject CurrentBGM;
+    GameObject CurrentEffect;
+
     public void Init()
     {
         GameObject root = GameObject.Find("@Sound");
@@ -26,9 +29,34 @@ public class SoundManager
                 GameObject go = new GameObject { name = soundNames[i] };
                 _audioSources[i] = go.AddComponent<AudioSource>();
                 go.transform.parent = root.transform;
+                if(i == 0) { SetCurrentBGM(go); }
+                else if(i == 1) { SetCurrentEffect(go); }
             }
 
             _audioSources[(int)Define.Sound.Bgm].loop = true;
+        }
+    }
+
+    private void SetCurrentBGM(GameObject go) {  CurrentBGM=go; }
+    private void SetCurrentEffect(GameObject go) {  CurrentEffect=go; }
+    public GameObject GetCurrentBGM() 
+    {
+        if(CurrentBGM != null)
+            return CurrentBGM; 
+        else 
+        {
+            Debug.Log("no current BGM");
+            return null; 
+        }
+    }
+    public GameObject GetCurrentEffect() 
+    {
+        if (CurrentEffect != null)
+            return CurrentEffect;
+        else
+        {
+            Debug.Log("no current Effect");
+            return null;
         }
     }
 

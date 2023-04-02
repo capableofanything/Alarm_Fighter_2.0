@@ -53,4 +53,10 @@ public class Util
         }
         return null;
     }
+    static public void LookAtTarget(GameObject go, GameObject target)
+    {
+        float z = Mathf.Atan2(target.transform.position.y - go.transform.position.y, target.transform.position.x - go.transform.position.x) * Mathf.Rad2Deg;
+        go.transform.rotation = Quaternion.Euler(0, 0, z);
+    }
+
 }

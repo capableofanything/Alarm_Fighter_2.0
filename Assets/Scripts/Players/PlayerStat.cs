@@ -19,8 +19,8 @@ public class PlayerStat : MonoBehaviour
     {
         if(CurrentHP<=0)
         {
-            //Managers.Game.GameOver();
-            //Managers.Scene.LoadScene("GameOver");
+            Managers.Player.SetAlive(false);
+            CurrentHP = -1000f;
         }
     }
     public void FillHp(float mount)    

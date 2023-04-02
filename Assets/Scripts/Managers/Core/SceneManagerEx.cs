@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,4 +20,5 @@ public class SceneManagerEx
     }
     
     public void Clear() { CurrentScene.Clear(); }       //불필요? NO! Managers Clear()서 호출
+
 }

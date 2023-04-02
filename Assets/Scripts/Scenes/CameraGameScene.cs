@@ -18,6 +18,8 @@ public class CameraGameScene : BaseScene//At the beginning of the this scene, re
         SpawnMonster();       
         SpawnPlayer();
         SpawnItemSpawner();
+        CheckingGame();
+
     }
     public void Update()
     {
@@ -43,14 +45,19 @@ public class CameraGameScene : BaseScene//At the beginning of the this scene, re
         {
             Managers.Field.SetField(go.GetComponent<Field>());
             Managers.Field.Init();
+            Animator[] ani = go.GetComponentsInChildren<Animator>();
+            foreach (Animator a in ani)
+            {
+                a.runtimeAnimatorController = Managers.Resource.Load<RuntimeAnimatorController>("Art/Animations/Fields/CameraFieldAnimation/CameraGridAnimator");
+            }
         }
     }
     private void SpawnPlayer()
     {
-        GameObject go = Managers.Resource.Load<GameObject>("Prefabs/Players/Player");
+        GameObject go = Managers.Resource.Load<GameObject>("Prefabs/Players/PlayerRig");
         if(go != null) 
         {
-            go = Managers.Resource.Instantiate("Players/Player");
+            go = Managers.Resource.Instantiate("Players/PlayerRig");
             Managers.Player.SetPlayer(go.GetComponent<Player>());
             SpawnPlayerHpBar(go);
         }
@@ -62,6 +69,7 @@ public class CameraGameScene : BaseScene//At the beginning of the this scene, re
         {
             SpawnMonsterHpBar(go);
             Managers.Monster.BossMonster = go;
+            Managers.Monster.Init(Define.GameSceneOrder.CameraScene_main);
         }
     }   
     private void SpawnPlayerHpBar(GameObject parent)
