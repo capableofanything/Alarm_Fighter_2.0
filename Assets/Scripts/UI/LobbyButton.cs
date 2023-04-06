@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class LobbyButton : MonoBehaviour
@@ -16,11 +17,12 @@ public class LobbyButton : MonoBehaviour
     }
     public void ClickScan()
     {
-        GetComponent<LobbyUI>().SetState((int)LobbyState.Scan);
+        GetComponent<Animator>().SetTrigger("ScanStart");
     }
 
-    public void LoadStage(Define.GameSceneOrder stage)
+    public void LoadStage()
     {
-        //
+        GameObject go = Managers.Resource.Instantiate("UI/DoorClose");
+        go.GetComponent<Door>().SetName(Managers.Game.NextStage.ToString());
     }
 }

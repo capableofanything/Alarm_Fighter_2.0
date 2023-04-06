@@ -18,6 +18,6 @@ public class LobbyScene : BaseScene
     
     private void SpawnDoorOpenUI()
     {
-        Managers.Resource.Instantiate("UI/DoorOpenLobby");
+        Managers.Resource.Instantiate("UI/DoorOpen");
     }
 }
