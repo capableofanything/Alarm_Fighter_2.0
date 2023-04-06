@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8045df0a93c12941a0ef6effc4c9644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundBgmName: 
+  soundBgmName: Unknown
   backGround: {fileID: 0}
   BossMonster: {fileID: 0}
   MonsterHP: {fileID: 0}

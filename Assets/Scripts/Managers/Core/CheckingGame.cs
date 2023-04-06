@@ -13,26 +13,27 @@ public class CheckingGame : MonoBehaviour
 
     void Update()
     {
-        if(!Managers.Player.IsAlive()&&!HasBeenCalled)
+        if (!Managers.Player.IsAlive() && !HasBeenCalled)
         {
-            GameObject go = Managers.Resource.Instantiate("UI/DoorClose");
+            GameObject go = Managers.Resource.Instantiate("UI/DoorCloseUI");
             go.GetComponent<Door>().SetName("Map");
             HasBeenCalled = true;
         }
-        else if(!Managers.Monster.IsAlive()&&!HasBeenCalled)
+        else if (!Managers.Monster.IsAlive() && !HasBeenCalled)
         {
-            GameObject go = Managers.Resource.Instantiate("UI/DoorClose");
-            if ((Managers.Monster.CurrentMonsterSceneName() + 1) != Define.GameSceneOrder.Map)
-            {
-                go.GetComponent<Door>().SetName((Managers.Monster.CurrentMonsterSceneName() + 1).ToString());
-                HasBeenCalled = true;
-            }
-            else
-            {
-                go.GetComponent<Door>().SetName("Map");
-                HasBeenCalled = true;
-            }
-            
+            Managers.Game.UpdateNextStage();
+            GameObject go = Managers.Resource.Instantiate("UI/DoorCloseUI");
+            //if ((Managers.Monster.CurrentMonsterSceneName() + 1) != Define.GameSceneOrder.Map)
+            //{
+            //    go.GetComponent<Door>().SetName((Managers.Monster.CurrentMonsterSceneName() + 1).ToString());
+            //    HasBeenCalled = true;
+            //}
+            //else
+            //{
+            go.GetComponent<Door>().SetName("Map");
+            HasBeenCalled = true;
+
+        //}
         }
     }
 }

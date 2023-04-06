@@ -12,11 +12,12 @@ public class LobbyScene : BaseScene
     protected override void Init()
     {
         base.Init();
-        SpawnDoorOpenUI();
+        SoundBgmPlay();
+        SpawnLobbyUI();
     }
     
-    private void SpawnDoorOpenUI()
+    private void SpawnLobbyUI()
     {
-        Managers.Resource.Instantiate("UI/DoorOpenLobby");
+        Managers.Resource.Instantiate("UI/Lobby/LobbyUI");
     }
 }

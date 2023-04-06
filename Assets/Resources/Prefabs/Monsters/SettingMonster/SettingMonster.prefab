@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 7331303635234973448}
   - component: {fileID: 2013765327790441746}
   - component: {fileID: 1100731702739850832}
+  - component: {fileID: -7682217098470539232}
   m_Layer: 0
   m_Name: SettingMonster
   m_TagString: Untagged
@@ -180,6 +181,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2712358447ca3f04781c5e4d0eb9140e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!210 &-7682217098470539232
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896207494117339250}
+  m_Enabled: 1
+  m_SortingLayerID: -1184195479
+  m_SortingLayer: 2
+  m_SortingOrder: 0
 --- !u!1 &2896207494127140842
 GameObject:
   m_ObjectHideFlags: 0

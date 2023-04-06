@@ -1,31 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.TextCore.Text;
 using UnityEngine;
 
 public class GameManagerEx
 {
-    public void GameOver()      
-    {
-        Managers.Clear();
-        Managers.Sound.Clear();     
-        Managers.Scene.LoadScene("GameOverScene");
-        //Managers.Sound.Play("GameClear", Define.Sound.Bgm);   
+    public Define.GameSceneOrder NextStage { get; private set; } = Define.GameSceneOrder.TimeScene_main;
 
-    }
-    public void StageClear()       
-    {
-        Managers.Clear();
-        Managers.Scene.LoadScene("StageClearScene");
-        Managers.Sound.Clear();     
-        //Managers.Sound.Play("GameClear", Define.Sound.Bgm);
+    public void UpdateNextStage() { NextStage++; }
 
-    }
-    public void GameClear()
+    public void QuitGame()
     {
-        Managers.Clear();
-        Managers.Scene.LoadScene("GameClearScene");
-        Managers.Sound.Clear();
+        SaveGame();
+        Application.Quit();
+    }
+
+    public void SaveGame()
+    {
+        PlayerPrefs.SetInt("NextStage", (int)NextStage);
+    }
+
+    public void LoadGame()
+    {
+        if (!PlayerPrefs.HasKey("NextStage"))
+            return;
+
+        NextStage = (Define.GameSceneOrder)PlayerPrefs.GetInt("NextStage");
+
     }
 }
 

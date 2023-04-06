@@ -19,7 +19,6 @@ public class CameraGameScene : BaseScene//At the beginning of the this scene, re
         SpawnPlayer();
         SpawnItemSpawner();
         CheckingGame();
-        SpawnDoorOpen();
     }
     public void Update()
     {

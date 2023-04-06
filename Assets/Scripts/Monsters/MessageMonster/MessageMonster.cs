@@ -35,6 +35,8 @@ public class MessageMonster : MonoBehaviour
     void LookAtTarget(GameObject go, GameObject target)
     {
         float z = Mathf.Atan2(target.transform.position.y - go.transform.position.y, target.transform.position.x - go.transform.position.x) * Mathf.Rad2Deg;
-        go.transform.rotation = Quaternion.Euler(0, 0, z);
+        
+        Quaternion angleAxis  = Quaternion.AngleAxis(z - 90f, Vector3.forward);
+        go.transform.rotation = angleAxis;
     }
 }

@@ -462,6 +462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterHPbar: {fileID: 5563703962830164702, guid: 92e7235221dec1640a9b71855199df9b, type: 3}
   playTime: 100
+  currentTime: 0
 --- !u!114 &3881692180017075569
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class HitHandler_Defalut : HitHandler
         float damage = -1f;
         if(stat != null)
         {
+            stat.transform.GetChild(0).GetComponent<Animator>().SetTrigger("hit");
             stat.FillHp(damage);
         }
     }

@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f736bc61a9b6240b3fd5241a83f4b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundBgmName: 
+  soundBgmName: Ephemeral
 --- !u!1 &898642090
 GameObject:
   m_ObjectHideFlags: 0

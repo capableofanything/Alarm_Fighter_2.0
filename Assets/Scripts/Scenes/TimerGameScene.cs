@@ -19,7 +19,6 @@ public class TimerGameScene : BaseScene//At the beginning of the this scene, res
         SpawnPlayer();
         SpawnItemSpawner();
         CheckingGame();
-        SpawnDoorOpen();
     }
     public void Update()
     {

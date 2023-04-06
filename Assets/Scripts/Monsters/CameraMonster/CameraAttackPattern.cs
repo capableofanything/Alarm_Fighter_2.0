@@ -23,7 +23,7 @@ public class CameraAttackPattern :MonoBehaviour
     
     public void Init()
     {
-        noteBarList_1 = new List<FunctionPointer>() { Defalut1_1, Defalut1_2, Defalut1_1, Defalut1_2 };
+        noteBarList_1 = new List<FunctionPointer>() { Defalut1_1, Rest, Defalut1_2, Rest, Defalut1_1, Rest, Defalut1_2 };
         noteBarList_2 = new List<FunctionPointer>() { Row1, Row2, Row3, Special };
         noteBarList_3 = new List<FunctionPointer>() { Column1, Column2, Column3, Special };
     }

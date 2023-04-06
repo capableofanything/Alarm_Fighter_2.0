@@ -36,7 +36,6 @@ public class LatterSpawner : MonoBehaviour
     IEnumerator DestroyLatter(GameObject go)
     {
         yield return new WaitForSeconds(8f);
-        Debug.Log("Pop!");
         Managers.Resource.Destroy(go);
     }
 }

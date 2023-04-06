@@ -19,7 +19,6 @@ public class NavigationGameScene : BaseScene//At the beginning of the this scene
         SpawnMonster();
         SpawnPlayer();
         SpawnItemSpawner();
-        SpawnDoorOpen();
         CheckingGame();
     }
     public void Update()

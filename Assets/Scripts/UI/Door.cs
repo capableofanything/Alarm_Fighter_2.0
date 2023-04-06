@@ -17,7 +17,7 @@ public class Door : MonoBehaviour
 
     private IEnumerator MyFunction()
     {
-        yield return new WaitForSeconds(100.0f);//finish animation time
+        yield return new WaitForSeconds(3.0f);//finish animation time
         StopCoroutine(coroutine);
         if(SceneName != null)
         {

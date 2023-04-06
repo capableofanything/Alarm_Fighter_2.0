@@ -21,13 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SettingScene_main.unity
     guid: a3fee0e9c5a258240a5ac2a82af086ac
   - enabled: 1
-    path: Assets/Scenes/FinishedScene.unity
-    guid: 3535ebb8a7837694ba63f3dab98b7455
-  - enabled: 1
     path: Assets/Scenes/MessageScene_main.unity
     guid: 123248993e524fe419272b9628a600d4
   - enabled: 1
     path: Assets/Scenes/NavigationScene_main.unity
     guid: 693bbb89239f3734f8e5a127ca8a35d1
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 13cb75ed2e4122449aafa19b5d53e669, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 7021e671d8b4544449ce9a5f717d1f46, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 513694f6af2f560418a6b6effa04bdd9, type: 2}

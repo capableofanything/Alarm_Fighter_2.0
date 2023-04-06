@@ -40,7 +40,7 @@ public class CameraMonster : MonoBehaviour
         callOrderList[index][note]();
 
         note++;
-        if (note >= 4)
+        if (note >= callOrderList[index].Count)
         {
             note = 0;
             index++;

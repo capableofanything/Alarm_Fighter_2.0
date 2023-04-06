@@ -11,7 +11,7 @@ public class MonsterHpBarUpdater : MonoBehaviour
     [SerializeField]
     public float playTime;
     private Image hp;
-    private float currentTime;
+    public float currentTime;
 
     void Start()
     {

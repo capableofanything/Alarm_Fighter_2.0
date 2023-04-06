@@ -22,6 +22,7 @@ public class Injector : MonoBehaviour
     public void Attack()
     {
         //Managers.Timer.ReduceTime(timeAmount);
+        Managers.Monster.BossMonster.GetComponent<MonsterHpBarUpdater>().currentTime -= 5;
         Destroy();
     }
 

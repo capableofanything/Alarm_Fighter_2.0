@@ -10,6 +10,7 @@ public class SceneManagerEx
     {
         //     Object The first active loaded object that matches the specified type. It returns
         //     null if no Object matches the type.
+
         get { return GameObject.FindObjectOfType<BaseScene>(); }        //@Scene에 붙어있는 BaseScene(컴포넌트)을 상속받는 씬 스크립트를 BaseScene형으로 반환?
     }
 

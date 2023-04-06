@@ -7,7 +7,7 @@ public abstract class BaseScene : MonoBehaviour     //모든 씬 script가 상속받는 
 {
     [SerializeField]
     protected string soundBgmName;                  //해당 씬의 BGM 이름
-
+    private IEnumerator coroutine;
     protected void SetBpm(int bpm)
     {
         Managers.Bpm.BPM = bpm;
@@ -15,6 +15,9 @@ public abstract class BaseScene : MonoBehaviour     //모든 씬 script가 상속받는 
     private void Awake()
     {
         Init();
+        coroutine = SpawnDoorOpenUI();
+        StartCoroutine(coroutine);
+
     }
     protected virtual void Init()                   //EventSystem(Prefab)으로 @EventSystem(GameObject)생성
     {
@@ -34,8 +37,14 @@ public abstract class BaseScene : MonoBehaviour     //모든 씬 script가 상속받는 
     {
         Managers.Resource.Instantiate("Manager/CheckingGame");
     }
-    protected void SpawnDoorOpen()
+    protected IEnumerator SpawnDoorOpenUI()
     {
-        Managers.Resource.Instantiate("UI/DoorOpen");
+        Managers.Resource.Instantiate("UI/DoorOpenUI");
+        GameObject go = Managers.Sound.GetCurrentBGM();
+        go.GetComponent<AudioSource>().Pause();
+        yield return new WaitForSeconds(1.0f);
+        go.GetComponent<AudioSource>().Play();
+        StopCoroutine(coroutine);
+
     }
 }

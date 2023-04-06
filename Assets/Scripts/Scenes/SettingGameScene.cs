@@ -19,7 +19,6 @@ public class SettingGameScene : BaseScene//At the beginning of the this scene, r
         SpawnPlayer();
         SpawnItemSpawner();
         CheckingGame();
-        SpawnDoorOpen();
     }
     public void Update()
     {
