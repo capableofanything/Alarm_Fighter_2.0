@@ -17,7 +17,7 @@ public class SwipeCartoon : MonoBehaviour
 
     private float[] scrollPageValues;
     private float valueDistance = 0;
-    private int currentPage = 0;
+    public int currentPage = 0;
     private int maxPage = 0;
     private float startTouchX;
     private float endTouchX;
@@ -51,6 +51,8 @@ public class SwipeCartoon : MonoBehaviour
 
     private void Update()
     {
+
+        Debug.Log(currentPage);
         if (isSwipeMode) return;
         // 현재 플레이 환경이 안드로이드일 때 전처리기 #if 조건에 만족하는 코드를 활성화
 #if UNITY_ANDROID

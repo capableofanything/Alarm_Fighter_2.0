@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GameManagerEx
 {
+
     public Define.GameSceneOrder NextStage { get; private set; } = Define.GameSceneOrder.TimeScene_main;
+
 
     public void UpdateNextStage() { NextStage++; }
 

@@ -17,6 +17,8 @@ public class Define
         NavigationScene_main,//100
         CameraScene_main,//120
         SettingScene_main,//120
+
+
         //Finished
         //FolderScene,
         //CallScene,

@@ -90,8 +90,9 @@ public class NavigationAttackPattern : MonoBehaviour
     {
         int destinationNum = UnityEngine.Random.Range(0, destinationArray.Count);
         Debug.Log("destinationNUM:  " + destinationNum);
-        
+
         //GameObject go = Managers.Resource.Load<GameObject>($"Prefabs/Monsters/CameraMonster/Effects/{tantacleArray[tantacleNum]}");
+        Managers.Sound.Play("NavigationMonster/Destination", Define.Sound.Effect, 1.0f, 0.1f);
         GameObject go = Managers.Resource.Load<GameObject>($"Prefabs/Monsters/NavigationMonster/Effects/{destinationArray[destinationNum]}");//destination prefab을 로드하여 생성
         if (go == null) 
             Debug.Log("go is null");
@@ -120,11 +121,12 @@ public class NavigationAttackPattern : MonoBehaviour
         {
             Managers.Field.GetGrid(1, i).GetComponent<Animator>().SetTrigger("Row");
             //Managers.Field.GetGrid(x, y).GetComponent<Animator>().SetTrigger("One");
-            Invoke("Row2_Init", 0.3f);
         }
+        Invoke("Row2_Init", 0.3f);
     }
     public void Row2_Init()
     {
+        Managers.Sound.Play("NavigationMonster/Arrow", Define.Sound.Effect, 1.0f, 0.5f);
         GameObject go = Managers.Resource.Load<GameObject>("Prefabs/Monsters/NavigationMonster/Effects/ArrowRR");
         GameObject arrowRR = Instantiate<GameObject>(go);
         Transform field = Managers.Field.GetGrid(1, 1).transform;
@@ -144,6 +146,7 @@ public class NavigationAttackPattern : MonoBehaviour
     
     public void Row3_Init()
     {
+        Managers.Sound.Play("NavigationMonster/Arrow", Define.Sound.Effect, 1.0f, 0.5f);
         GameObject go = Managers.Resource.Load<GameObject>("Prefabs/Monsters/NavigationMonster/Effects/ArrowRR");
         GameObject arrowRR = Instantiate<GameObject>(go);
         Transform field = Managers.Field.GetGrid(2, 1).transform;
@@ -158,12 +161,13 @@ public class NavigationAttackPattern : MonoBehaviour
             Managers.Field.GetGrid(i, 1).GetComponent<Animator>().SetTrigger("Column");
             //Managers.Field.GetGrid(x, y).GetComponent<Animator>().SetTrigger("One");
             //여러개의 grid가 색깔이 변하도록 하고 특정 grid에서 straight_arrow prefab 을 instantiate 한다
-            Invoke("Column2_Init", 0.3f);
         }
+        Invoke("Column2_Init", 0.3f);
     }
 
     public void Column2_Init()
     {
+        Managers.Sound.Play("NavigationMonster/Arrow", Define.Sound.Effect, 1.0f, 0.5f);
         GameObject go = Managers.Resource.Load<GameObject>("Prefabs/Monsters/NavigationMonster/Effects/ArrowLL");
         GameObject arrowLL = Instantiate<GameObject>(go);
         Transform field = Managers.Field.GetGrid(1, 1).transform;
@@ -179,12 +183,13 @@ public class NavigationAttackPattern : MonoBehaviour
             Managers.Field.GetGrid(i, 2).GetComponent<Animator>().SetTrigger("Column");
             //Managers.Field.GetGrid(x, y).GetComponent<Animator>().SetTrigger("One");
             //여러개의 grid가 색깔이 변하도록 하고 특정 grid에서 straight_arrow prefab 을 instantiate 한다
-            Invoke("Column3_Init", 0.3f);
         }
+        Invoke("Column3_Init", 0.3f);
     }
 
     public void Column3_Init()
     {
+        Managers.Sound.Play("NavigationMonster/Arrow", Define.Sound.Effect, 1.0f, 0.5f);
         GameObject go = Managers.Resource.Load<GameObject>("Prefabs/Monsters/NavigationMonster/Effects/ArrowLL");
         GameObject arrowLL = Instantiate<GameObject>(go);
         Transform field = Managers.Field.GetGrid(1,2).transform;
@@ -227,6 +232,7 @@ public class NavigationAttackPattern : MonoBehaviour
 
     public void SpecialAttack_LLRR_Init()
     {
+        Managers.Sound.Play("NavigationMonster/Arrow", Define.Sound.Effect, 1.0f, 0.5f);
         GameObject go = Managers.Resource.Load<GameObject>("Prefabs/Monsters/NavigationMonster/Effects/ArrowLLRR");
         GameObject arrowLL = Instantiate<GameObject>(go);
     }
@@ -243,6 +249,7 @@ public class NavigationAttackPattern : MonoBehaviour
 
     public void SpecialAttack_LRL_Init()
     {
+        Managers.Sound.Play("NavigationMonster/Arrow", Define.Sound.Effect, 1.0f, 0.5f);
         GameObject go = Managers.Resource.Load<GameObject>("Prefabs/Monsters/NavigationMonster/Effects/ArrowLRL");
         GameObject arrowLL = Instantiate<GameObject>(go);
     }
@@ -261,6 +268,7 @@ public class NavigationAttackPattern : MonoBehaviour
 
     public void SpecialAttack_LRRL_Init()
     {
+        Managers.Sound.Play("NavigationMonster/Arrow", Define.Sound.Effect, 1.0f, 0.5f);
         GameObject go = Managers.Resource.Load<GameObject>("Prefabs/Monsters/NavigationMonster/Effects/ArrowLRRL");
         GameObject arrowLL = Instantiate<GameObject>(go);
     }
@@ -279,6 +287,7 @@ public class NavigationAttackPattern : MonoBehaviour
 
     public void SpecialAttack_RLRL_Init()
     {
+        Managers.Sound.Play("NavigationMonster/Arrow", Define.Sound.Effect, 1.0f, 0.5f);
         GameObject go = Managers.Resource.Load<GameObject>("Prefabs/Monsters/NavigationMonster/Effects/ArrowRLRL");
         GameObject arrowLL = Instantiate<GameObject>(go);
     }
@@ -299,6 +308,7 @@ public class NavigationAttackPattern : MonoBehaviour
 
     public void SpecialAttack_LLLLRR_Init()
     {
+        Managers.Sound.Play("NavigationMonster/Arrow", Define.Sound.Effect, 1.0f, 0.5f);
         GameObject go = Managers.Resource.Load<GameObject>("Prefabs/Monsters/NavigationMonster/Effects/ArrowLLLLRR");
         GameObject arrowLL = Instantiate<GameObject>(go);
     }
@@ -318,6 +328,7 @@ public class NavigationAttackPattern : MonoBehaviour
 
     public void SpecialAttack_RRRRLL_Init()
     {
+        Managers.Sound.Play("NavigationMonster/Arrow", Define.Sound.Effect, 1.0f, 0.5f);
         GameObject go = Managers.Resource.Load<GameObject>("Prefabs/Monsters/NavigationMonster/Effects/ArrowRRRRLL");
         GameObject arrowLL = Instantiate<GameObject>(go);
     }
